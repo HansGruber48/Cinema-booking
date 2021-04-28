@@ -1,0 +1,45 @@
+#include<iostream>
+
+int main() {
+   const int R = 8,P = 9 ;           
+   int salle[R][P];
+   int nbplaces,numrangee,i,j,cpt;
+   char conf ;
+   for (i=0 ;i<R ;i++){
+      for (j=0 ;j<P ;j++)
+          salle[i][j] = -1}
+   do {
+       cout << « Bonjour et bienvenue sur votre service de réservation de places » << endl;
+      do {
+        cout << « Combien de places voulez-vous acheter ? (de 1 à 9)» << endl ;
+        cin >> nbplaces ;
+        If ((nbplaces == 0) || (nbplaces > 9)) 
+        cout << « Choix incorrect » << endl;
+        }
+    While ((nbplaces == 0) || (nbplaces > 9)) ;  
+    Cout << endl ;  
+  Do { 
+    Do {
+        cout << « Dans quelle rangée voulez-vous être ?     (choisissez un numéro de rangée entre 0 et 7) » << endl ;
+        cin >> numrangee ;
+        If (numrangee > 7)  
+        cout << « Choix incorrect » << endl ;
+        }
+   While (numrangee > 7) ;
+   Cout << endl ;  
+   i = numrangee ;
+     for (j=0 ;j<P ;j++){
+     If (salle[i][j] == -1) cpt++ ;}
+   If (nbplaces<=cpt) {
+      Cout << « C’est ok. Voici vos places » << endl;
+      For (j=0 ;j<=nbplaces ;j++) {
+      If (salle[i][j] == -1)
+      {salle[i][j] = 1 ;
+      cout << « Rangée » i << « Place » j << endl;}}}
+      else cout << « Désolé. Il n’y a pas ou plus assez de  place sur cette rangée << endl; 
+      cout << « Voulez-vous changer de rangée (O/N) << endl ;
+      cin >> conf ; 
+     } while (conf =’O’) || (conf = ‘o’) ;
+     Cout << « Voulez-vous quitter l’application (O/N) ? » << endl ; 
+     cin >> conf ; 
+    } while (conf =’O’) || (conf = ‘o’) ;}
